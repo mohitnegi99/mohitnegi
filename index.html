@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Creative Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="matrix-bg" id="matrixBg"></div>
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="code-brackets">&lt;</div>
+                <div class="developer-name">MOHIT NEGI</div>
+                <div class="code-brackets">/&gt;</div>
+            </div>
+            <div class="loading-text">
+                <span class="typing-loader" id="typingLoader">Initializing Portfolio...</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-glow"></div>
+                </div>
+                <div class="loading-percentage" id="loadingPercentage">0%</div>
+            </div>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Geometric Background -->
+    <div class="geometric-bg">
+        <div class="shape triangle"></div>
+        <div class="shape circle"></div>
+        <div class="shape square"></div>
+        <div class="shape hexagon"></div>
+        <div class="shape diamond"></div>
+    </div>
+
+    <!-- Floating Navigation Dots -->
+    <div class="nav-dots" id="navDots">
+        <div class="nav-dot active" data-section="home" title="Home"></div>
+        <div class="nav-dot" data-section="about" title="About"></div>
+        <div class="nav-dot" data-section="education" title="Education"></div>
+        <div class="nav-dot" data-section="certifications" title="Certifications"></div>
+        <div class="nav-dot" data-section="skills" title="Skills"></div>
+        <div class="nav-dot" data-section="projects" title="Projects"></div>
+        <div class="nav-dot" data-section="social" title="Contact"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#social">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="intro-text">Hello, I'm</div>
+                <div class="glitch-wrapper">
+                    <h1 class="glitch" data-text="Your Name">MOHIT NEGI</h1>
+                </div>
+                <div class="rotating-text">
+                    <span class="text-before">I'm a</span>
+                    <div class="rotating-words">
+                        <span class="word active">Student</span>
+                        <span class="word">aspiring Full Stack Developer</span>
+                        <span class="word">Problem Solver</span>
+                        <span class="word">Tech Enthusiast</span>
+                    </div>
+                </div>
+                <p class="hero-description fade-up">My goal is to leverage technology to create impactful solutions and grow as a professional in the tech industry.</p>
+                <div class="hero-buttons fade-up">
+                    <button class="btn-primary" onclick="scrollToSection('projects')">
+                        <span>Explore My Work</span>
+                        <i class="fas fa-rocket"></i>
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('social')">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="scroll-text">Discover More</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="profile-section fade-in">
+                    <div class="image-container">
+                        <div class="profile-placeholder">
+                            <img src="mohitnegi.jpg" alt="Mohit Negi - Profile Picture" class="profile-image" />
+                        </div>
+                        <div class="floating-icons">
+                            <i class="fab fa-js-square icon-1"></i>
+                            <i class="fab fa-react icon-2"></i>
+                            <i class="fab fa-node-js icon-3"></i>
+                            <i class="fab fa-python icon-4"></i>
+                        </div>
+                        <div class="profile-ring"></div>
+                    </div>
+                </div>
+                <div class="about-text fade-in">
+                    <div class="text-highlight">
+                        <p>Welcome to my creative space! I'm a passionate developer who believes in the power of technology to transform ideas into reality. My journey in the digital world is driven by curiosity, innovation, and a relentless pursuit of excellence.</p>
+                    </div>
+                    <p>With expertise spanning both frontend artistry and backend architecture, I specialize in creating seamless, user-centric applications. My approach combines technical precision with creative flair, ensuring every project delivers both functionality and visual appeal.</p>
+                    <p>Beyond coding, I'm an avid learner who thrives on exploring emerging technologies, contributing to open-source communities, and mentoring fellow developers. I believe that great software is born from the intersection of technical skill and human understanding.</p>
+                    
+                    <div class="personal-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Based in Dehradun, Uttarakhand</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-coffee"></i>
+                            <span>Fueled by Coffee & Code</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Passionate about Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Educational Journey
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="education-badge">🎓</div>
+                        <h3>Bachelor of Computer Science</h3>
+                        <div class="year">2023 - 2027</div>
+                        <div class="institution">Graphic Era Hill University</div>
+                        <p><strong>Specialization:</strong> Artificial intelligence and Data Science</p>
+                        <p>Deep dive into algorithmic thinking, data structures, software architecture, and modern development practices. Graduated with comprehensive knowledge in full-stack development.</p>
+                        <div class="achievements">
+                            <span class="achievement">📚 GPA: 8.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="education-badge">📚</div>
+                        <h3>Higher Secondary Education</h3>
+                        <div class="year">2018 - 2020</div>
+                        <div class="institution">Kendriya Vidyalaya</div>
+                        <p><strong>Stream:</strong> PCM + CS</p>
+                        <p>Built a strong foundation in analytical thinking, problem-solving, and logical reasoning. Discovered my passion for programming and technology during these formative years.</p>
+                        <div class="achievements">
+                            <span class="achievement">🥇 Valedictorian</span>
+                            <span class="achievement">💻 90% in CS 12TH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Certifications & Achievements
+            </h2>
+            <div class="certifications-grid">
+                <div class="cert-card fade-in">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/300x200/1976d2/ffffff?text=Full+Stack+Certificate" alt="Full Stack Development Certificate" />
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <h3>Full Stack Web Development</h3>
+                            <div class="cert-badge">
+                                <span class="cert-status verified">VERIFIED</span>
+                            </div>
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-issuer">
+                                <i class="fas fa-university"></i>
+                                <span>Tech Institute Academy</span>
+                            </div>
+                            <div class="cert-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: March 2023</span>
+                            </div>
+                        </div>
+                        <p>Comprehensive program covering MEAN/MERN stack development, including React, Node.js, Express, MongoDB, and modern deployment practices.</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">MongoDB</span>
+                            <span class="skill-pill">Express.js</span>
+                        </div>
+                        <div class="cert-actions">
+                            <a href="#" class="verify-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Verify Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/300x200/ff9800/ffffff?text=AWS+Certificate" alt="AWS Solutions Architect Certificate" />
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <h3>AWS Solutions Architect</h3>
+                            <div class="cert-badge">
+                                <span class="cert-status verified">VERIFIED</span>
+                            </div>
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-issuer">
+                                <i class="fab fa-aws"></i>
+                                <span>Amazon Web Services</span>
+                            </div>
+                            <div class="cert-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: January 2024</span>
+                            </div>
+                        </div>
+                        <p>Professional certification demonstrating expertise in designing and deploying scalable, fault-tolerant systems on AWS cloud infrastructure.</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">EC2</span>
+                            <span class="skill-pill">S3</span>
+                            <span class="skill-pill">Lambda</span>
+                            <span class="skill-pill">RDS</span>
+                        </div>
+                        <div class="cert-actions">
+                            <a href="#" class="verify-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Verify Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-image">
+                        <img src="https://via.placeholder.com/300x200/4caf50/ffffff?text=JavaScript+Certificate" alt="JavaScript Algorithms Certificate" />
+                    </div>
+                    <div class="cert-content">
+                        <div class="cert-header">
+                            <h3>JavaScript Algorithms & Data Structures</h3>
+                            <div class="cert-badge">
+                                <span class="cert-status verified">VERIFIED</span>
+                            </div>
+                        </div>
+                        <div class="cert-details">
+                            <div class="cert-issuer">
+                                <i class="fas fa-code"></i>
+                                <span>freeCodeCamp</span>
+                            </div>
+                            <div class="cert-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: November 2023</span>
+                            </div>
+                        </div>
+                        <p>Advanced JavaScript programming certification covering ES6+, functional programming, data structures, and algorithmic problem-solving techniques.</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">ES6+</span>
+                            <span class="skill-pill">Algorithms</span>
+                            <span class="skill-pill">Data Structures</span>
+                            <span class="skill-pill">Functional Programming</span>
+                        </div>
+                        <div class="cert-actions">
+                            <a href="#" class="verify-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Verify Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">PHP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Frontend Technologies</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Sass</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend & Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Google Cloud</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Others</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">NPM/Yarn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile & Frameworks</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Nuxt.js</span>
+                        <span class="skill-tag">Electron</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-category="web">
+                    <div class="project-img">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="link-btn" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="link-btn" title="Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-Commerce</div>
+                        <h3>ShopSmart Platform</h3>
+                        <p>A comprehensive e-commerce solution featuring user authentication, secure payment processing, inventory management, and an intuitive admin dashboard.</p>
+                        <div class="project-features">
+                            <span class="feature">🔐 Secure Authentication</span>
+                            <span class="feature">💳 Payment Integration</span>
+                            <span class="feature">📱 Mobile Responsive</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="web">
+                    <div class="project-img">
+                        <i class="fas fa-tasks"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="link-btn" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="link-btn" title="Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Productivity</div>
+                        <h3>TaskFlow Manager</h3>
+                        <p>A collaborative project management tool with real-time updates, team chat, file sharing, and advanced analytics for productivity tracking.</p>
+                        <div class="project-features">
+                            <span class="feature">⚡ Real-time Updates</span>
+                            <span class="feature">👥 Team Collaboration</span>
+                            <span class="feature">📊 Analytics Dashboard</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" data-category="data">
+                    <div class="project-img">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="link-btn" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="link-btn" title="Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Data Visualization</div>
+                        <h3>Analytics Pro Dashboard</h3>
+                        <p>An interactive business intelligence dashboard with dynamic charts, real-time data processing, and customizable reporting features.</p>
+                        <div class="project-features">
+                            <span class="feature">📈 Interactive Charts</span>
+                            <span class="feature">🔄 Real-time Data</span>
+                            <span class="feature">📋 Custom Reports</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="social">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                Let's Connect
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text fade-in">
+                    <h3>Ready to Create Something Amazing?</h3>
+                    <p>I'm always excited about new opportunities and innovative projects. Whether you have a specific vision in mind or just want to explore possibilities, I'd love to collaborate and bring your ideas to life!</p>
+                </div>
+                <div class="social-links fade-in">
+                    <a href="https://linkedin.com/in/mohitnegi99" class="social-link linkedin" target="_blank">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-label">LinkedIn</span>
+                            <span class="social-handle">Connect professionally</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/mohitnegi99" class="social-link github" target="_blank">
+                        <div class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-label">GitHub</span>
+                            <span class="social-handle">Explore my code</span>
+                        </div>
+                    </a>
+                    <a href="mailto:mohitnegi0610@gmail.com" class="social-link email" target="_blank">
+                        <div class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-label">Email</span>
+                            <span class="social-handle">Drop me a line</span>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/mohit_negi99" class="social-link twitter" target="_blank">
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-info">
+                            <span class="social-label">Twitter</span>
+                            <span class="social-handle">Follow my journey</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Your Name. Designed & Built with passion, precision, and countless cups of coffee ☕</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#home" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                        Back to Top
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
